@@ -1,6 +1,106 @@
+/* 1. Reset CSS de base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Variables CSS */
+:root {
+  --font-size: 1.5rem;
+  --font-color: white;
+}
+
+/* 3. Style global du body */
 body {
-    background-color: #f0f8ff;
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff; /* couleur de fond de secours */
+  background-image: url("images/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--font-degrade);
+  height: 100vh;
+  color: var(--font-color);
+}
+
+/* 4. Barre de navigation */
+header{
+  flex: 0.5;
+}
+.navigation {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100px;
+ 
+}
+#content {
+   
+    transition: opacity 0.3s ease-in-out;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border: 10px;
+    border-color: blue;
+    border-radius: 20px;
+    gap: 3rem;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 15px;
+    font-size: var(--font-size);
+}
+/* animation */
+#content {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+#content.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.weatherContents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* 5. Barre de recherche */
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem;
+}
+
+.search input {
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: transparent;
+  border-color: black;
+  color: white;
+}
+
+.search-btn {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}

@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>App Météo</title>
-  </head>
-  <body>
-    <h1>Bienvenue sur l'app météo !</h1>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+          <div class="search container">
+            <input type="search" id="search" name="user-search" maxlength="25" required="">
+            <button type="button" class="search-btn">Search</button>
+            <button id="toggle-unit" class="search-btn">°F</button>
+
+          </div>
+
+        </nav>
+    </header>
+    <div id="content" class="hidden">
+      <div class="weatherContents"></div>
+      <div class="weatherItem"></div>
+      <div class="locationContainer"></div>
+    </div>
+</body>
+
 </html>
